@@ -1,0 +1,99 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #4C1D95; /* 深紫色背景 */
+    color: #FCD34D; /* 金黄色文字 */
+    line-height: 1.6;
+}
+
+/* 容器布局 */
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 300px;
+    padding: 2rem;
+}
+
+/* 介绍部分样式 */
+.intro {
+    margin-bottom: 3rem;
+}
+
+.intro h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title, .description, .motto {
+    margin-bottom: 1rem;
+}
+
+/* 中英文文本样式 */
+.en, .cn {
+    display: block;
+}
+
+.cn {
+    margin-top: 0.25rem;
+    opacity: 0.9;
+}
+
+/* 菜单样式 */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menu li:hover {
+    transform: translateX(10px);
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu .description {
+    display: block;
+    font-size: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu li:hover .description {
+    opacity: 0.7;
+}
+
+/* 主内容区域样式 */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.scroll-image:hover {
+    transform: scale(1.02);
+}

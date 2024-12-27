@@ -2,33 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 确保页面在移动设备上正确显示 / Ensure proper display on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meng Liao - Digital Media Portfolio</title>
-    <style>
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>have fun</title>
+    <!-- 链接到样式表 / Link to stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Meng Liao</h1>
-        <p>Game Narrative Designer & Digital Media Creator</p>
-    </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm a narrative designer with experience in game development and digital storytelling.</p>
-    </main>
+    <!-- 主容器：使用 flex 布局将页面分为左右两部分 
+         Main container: uses flex layout to divide page into left and right sections -->
+    <div class="container">
+        <!-- 左侧导航栏 / Left sidebar navigation -->
+        <nav class="sidebar">
+            <!-- 头部区域：包含头像和简介 
+                 Header section: contains avatar and introduction -->
+            <div class="header">
+                <!-- 头像容器 / Avatar container -->
+                <div class="avatar">
+                    <img src="images/avatar.png" alt="Meng's avatar">
+                </div>
+                <!-- 个人简介 / Personal introduction -->
+                <div class="intro">
+                    <h1>hi I'm Meng</h1>
+                    <div class="description">I want to design games everyone can play</div>
+                </div>
+            </div>
+
+            <!-- 作品菜单列表 / Portfolio menu list -->
+            <ul class="menu">
+                <!-- 每个作品项目 / Each portfolio item -->
+                <li>
+                    <a href="#star-game">
+                        <!-- 作品标题 / Project title -->
+                        <span class="title">Star Game</span>
+                        <!-- 作品描述（悬停时显示）/ Project description (shows on hover) -->
+                        <span class="description">Solo-developed Web Game</span>
+                    </a>
+                </li>
+                <!-- 其他作品项目结构相同 / Other projects follow the same structure -->
+                <li>
+                    <a href="#soaring-dream">
+                        <span class="title">Soaring Dream</span>
+                        <span class="description">Lead Narrative Designer, MMORPG Project</span>
+                    </a>
+            </li>
+            <li>
+                <a href="#the-well">
+                    <span class="title">The WELL</span>
+                    <span class="description">Short Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="#twin-embroidery">
+                    <span class="title">Twin Embroidery</span>
+                    <span class="description">Digital Comic Series</span>
+                </a>
+            </li>
+            <li>
+                <a href="#girl-band">
+                    <span class="title">The Glorious Girl Band</span>
+                    <span class="description">Digital Comic Series</span>
+                </a>
+            </li>
+            <li>
+                <a href="#night-rain">
+                    <span class="title">A Letter in the Night Rain</span>
+                    <span class="description">Digital Comic Series</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    <span class="title">about me</span>
+                    <span class="description">Experience & Contact</span>
+                </a>
+            </li>
+            </ul>
+        </nav>
+
+        <!-- 右侧主内容区域：显示卷轴图片 
+             Right main content area: displays scroll image -->
+             <main class="content">
+                <div class="scroll-container">
+                    <img src="images/scroll.png" alt="Ancient scroll with character" class="scroll-image">
+                    <span class="scroll-description">and i LOVE zelda!!!</span>
+                </div>
+            </main>
+    </div>
 </body>
 </html>
