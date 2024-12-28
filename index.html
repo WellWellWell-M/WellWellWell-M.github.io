@@ -1,94 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 设置网页的基本属性 -->
     <meta charset="UTF-8">
-    <!-- 确保页面在移动设备上正确显示 / Ensure proper display on mobile devices -->
+    <!-- 确保页面在移动设备上正确显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页标题 -->
     <title>have fun</title>
-    <!-- 链接到样式表 / Link to stylesheet -->
+    <!-- 链接到样式表文件 -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- 设置网页图标 -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 主容器：使用 flex 布局将页面分为左右两部分 
-         Main container: uses flex layout to divide page into left and right sections -->
+    <!-- 整个页面的主容器，分为左右两部分 -->
     <div class="container">
-        <!-- 左侧导航栏 / Left sidebar navigation -->
+        <!-- 左侧边栏：包含个人信息和导航菜单 -->
         <nav class="sidebar">
-            <!-- 头部区域：包含头像和简介 
-                 Header section: contains avatar and introduction -->
+            <!-- 头部区域：展示头像和个人简介 -->
             <div class="header">
-                <!-- 头像容器 / Avatar container -->
+                <!-- 头像容器 -->
                 <div class="avatar">
                     <img src="images/avatar.png" alt="Meng's avatar">
                 </div>
-                <!-- 个人简介 / Personal introduction -->
-                <div class="intro">
+                <!-- 添加链接和cursor样式 -->
+                <div class="intro" style="cursor: pointer;" id="home-link">
                     <h1>hi I'm Meng</h1>
                     <div class="description">I want to design games everyone can play</div>
                 </div>
             </div>
 
-            <!-- 作品菜单列表 / Portfolio menu list -->
+            <!-- 作品导航菜单列表 -->
             <ul class="menu">
-                <!-- 每个作品项目 / Each portfolio item -->
+                <!-- 每个菜单项都包含标题和描述 -->
                 <li>
-                    <a href="#star-game">
-                        <!-- 作品标题 / Project title -->
+                    <!-- active类表示当前选中的项目 -->
+                    <a href="#star-game" class="menu-link active">
                         <span class="title">Star Game</span>
-                        <!-- 作品描述（悬停时显示）/ Project description (shows on hover) -->
                         <span class="description">Solo-developed Web Game</span>
                     </a>
                 </li>
-                <!-- 其他作品项目结构相同 / Other projects follow the same structure -->
+                <!-- 其他作品菜单项，结构相同 -->
                 <li>
-                    <a href="#soaring-dream">
+                    <a href="#soaring-dream" class="menu-link">
                         <span class="title">Soaring Dream</span>
-                        <span class="description">Lead Narrative Designer, MMORPG Project</span>
+                        <span class="description">Lead Narrative Designer, MMORPG</span>
                     </a>
-            </li>
-            <li>
-                <a href="#the-well">
-                    <span class="title">The WELL</span>
-                    <span class="description">Short Story</span>
-                </a>
-            </li>
-            <li>
-                <a href="#twin-embroidery">
-                    <span class="title">Twin Embroidery</span>
-                    <span class="description">Digital Comic Series</span>
-                </a>
-            </li>
-            <li>
-                <a href="#girl-band">
-                    <span class="title">The Glorious Girl Band</span>
-                    <span class="description">Digital Comic Series</span>
-                </a>
-            </li>
-            <li>
-                <a href="#night-rain">
-                    <span class="title">A Letter in the Night Rain</span>
-                    <span class="description">Digital Comic Series</span>
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <span class="title">about me</span>
-                    <span class="description">Experience & Contact</span>
-                </a>
-            </li>
+                </li>
+                <li>
+                    <a href="#the-well" class="menu-link">
+                        <span class="title">The WELL</span>
+                        <span class="description">Short Fiction Story</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#twin-embroidery" class="menu-link">
+                        <span class="title">Twin Embroidery</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#girl-band" class="menu-link">
+                        <span class="title">The Glorious Girl Band</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#night-rain" class="menu-link">
+                        <span class="title">A Letter in the Night Rain</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="menu-link">
+                        <span class="title">about me</span>
+                        <span class="description">Experience & Contact</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <!-- 右侧主内容区域：显示卷轴图片 
-             Right main content area: displays scroll image -->
-             <main class="content">
-                <div class="scroll-container">
-                    <img src="images/scroll.png" alt="Ancient scroll with character" class="scroll-image">
-                    <span class="scroll-description">and i LOVE zelda!!!</span>
+        <!-- 右侧主内容区域 -->
+        <main class="content">
+            <!-- 主页装饰：塞尔达风格的卷轴图片 -->
+            <div class="scroll-container">
+                <img src="images/scroll.png" alt="Ancient scroll with character" class="scroll-image">
+                <span class="scroll-description">and i LOVE zelda!!!</span>
+            </div>
+
+            <!-- Star Game 项目展示区域 -->
+            <section id="star-game-section" class="content-section">
+                <div class="project-container">
+                    <!-- 游戏展示区域 -->
+                    <div class="game-container">
+                        <!-- 游戏iframe，用于嵌入网页游戏 -->
+                        <iframe id="game-frame" src="https://WellWellWell-M.github.io/star-game" allowfullscreen></iframe>
+                        <!-- 重启游戏按钮 -->
+                        <button class="restart-btn">Restart</button>
+                    </div>
+
+                    <!-- 游戏介绍文本区域 -->
+                    <div class="project-content">
+                        <h3>Overview</h3>
+                        
+                        <p>This is a mini game that unfolds across three screens in about two minutes. As my first solo game development project, it marks a special milestone in my coding journey. Over three weeks, I taught myself essential tools - from game engines (GMS, Godot) to AI assistants (Cursor, Midjourney, Stable Diffusion) and version control (GitHub).</p>
+                        
+                        <p>I tried to tell a story about a lonely girl who shoots down stars and encircles them to make them her companions. Eventually, she creates an entire universe - including the Sun, Earth, and Moon - yet remains alone. I wish I had more time to tell the story through gameplay instead of text (and create better artwork - sorry about my poor pixel sprite animation!).</p>
+                        
+                        <p>Though it's far from perfect (quite rough actually), I'm proud to have brought it from concept to playable reality. I chose to omit tutorials, trusting in our natural inclination to play. But here's a small hint if you're wondering how to get <span class="highlight">starTed</span> - </p>
+
+                        <p class="hidden-message">
+                            <span>sometimes you need to draw your own path:)</span>
+                        </p>
+
+                        <h3>Concept Art</h3>
+                        
+                        <div class="concept-art">
+                            <img src="images/concept-art.jpg" alt="Star Game concept art" class="concept-image">
+                            <p>I used Midjourney to create the initial concept art, inspired by Van Gogh's starry nights. Then I ran it through Stable Diffusion to transform it into pixel art - which you'll see in the game's final scene. I had a lot of fun playing with these AI tools and can't wait to experiment more with them in future projects!</p>
+                        </div>
+
+                        <h3>Development</h3>
+                        <div class="development">
+                            <img src="images/development.jpg" alt="Star Game development process" class="development-image">
+                            <p>Though I had great help from Cursor AI as my coding assistant, programming was still the most challenging part of the development process. At first, I needed Cursor to explain every line of code to me. But gradually, I learned to read most of the code and even started tweaking parameters on my own. I have to say, it felt like magic - watching the game respond to my code changes was fascinating! This experience has definitely motivated me to learn more about programming - just like now building my personal portfolio website.</p>
+                        </div>
+                    </div>
                 </div>
-            </main>
+            </section>
+
+            <!-- The WELL 项目展示区域 -->
+            <section id="the-well-section" class="content-section">
+                <div class="project-container">
+                    <!-- 文章正文部分 -->
+                    <div class="story-container">
+                        <h3>The WELL</h3>
+                        <div class="story-content" id="well-content">
+                            <!-- 文章内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Afterword部分 -->
+                    <div class="project-content">
+                        <h3>Afterword</h3>
+                        <p>This story holds special significance for me, not only as my first attempt at writing in English but as a journey into self-discovery. For years, I excelled at commercial writing - analyzing markets, audience needs, and project requirements. Yet when I finally set aside all commercial considerations and ventured into my own heart, I discovered a well had been there all along.</p>
+                        
+                        <p>In rural China, wells hold ancient mysteries. Every village seems to harbor tales of women who, in moments of despair, leapt into wells, their spirits lingering as haunting presences in the dark waters below.</p>
+                        
+                        <p>As a child, these stories made me fear wells. They seemed to embody life's troubles - like drawing water from their depths, each attempt to resolve one problem only revealed more beneath. But years later, I encountered a story about African village women that changed my perspective. Though NGOs had installed modern water systems in their communities, many women still chose to visit the wells. It was their sanctuary, the one place where they could truly relax and be themselves.</p>
+                        
+                        <p>This revelation transformed my understanding. What I had seen as an endless source of pain was actually a wellspring of solace - for most women, the world itself has often been the source of suffering.</p>
+                        
+                        <p>I created this story because women seem to always be searching for their own wells, as the world beyond belongs to men. As Simone de Beauvoir observed in The Second Sex: "The wonderful thing about man - in adolescence and maturity - is that he is not destined; the word 'destiny' has a different resonance for boys and girls. The more a boy grows and develops, the more he opens his adventure into the world and the more he is called to surpass himself. Meanwhile, the girl will discover that the world is limited, she will learn that she is destined for man, and she will dream not of surpassing herself but of finding happiness."</p>
+                                        </div>
+                </div>
+            </section>
+        </main>
     </div>
+
+    <!-- JavaScript代码部分 -->
+    <script>
+        // 获取所有需要的元素
+        const homeLink = document.getElementById('home-link');
+        const scrollContainer = document.querySelector('.scroll-container');
+        const contentSections = document.querySelectorAll('.content-section');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        // 显示主页内容的函数
+        function showHome() {
+            // 显示塞尔达图片
+            scrollContainer.style.display = 'block';
+            // 隐藏所有项目内容
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // 移除所有菜单项的激活状态
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // 点击个人介绍时返回主页
+        homeLink.addEventListener('click', showHome);
+
+        // 修改菜单点击事件处理
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // 隐藏塞尔达图片
+                scrollContainer.style.display = 'none';
+                
+                // 移除所有链接和区块的active类
+                menuLinks.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // 为点击的链接添加active类
+                link.classList.add('active');
+                
+                // 显示对应的区块
+                const sectionId = link.getAttribute('href').substring(1) + '-section';
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.classList.add('active');
+                    // 如果是The WELL页面，加载内容
+                    if (sectionId === 'the-well-section') {
+                        loadStoryContent();
+                    }
+                }
+            });
+        });
+
+        // 初始显示主页
+        showHome();
+
+        // 重启游戏按钮功能
+        document.querySelector('.restart-btn')?.addEventListener('click', () => {
+            const gameFrame = document.getElementById('game-frame');
+            // 通过重新加载iframe来重启游戏
+            gameFrame.src = gameFrame.src;
+        });
+
+        // 添加加载故事内容的函数
+        async function loadStoryContent() {
+            try {
+                const response = await fetch('content/well-content.html');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const content = await response.text();
+                
+                // 简化HTML结构，移除作者信息
+                const formattedContent = `
+                    <div class="story-content">
+                        <h1>The WELL</h1>
+                        ${content.split('\n\n').map(paragraph => 
+                            paragraph.trim() ? `<p>${paragraph.trim()}</p>` : ''
+                        ).join('')}
+                    </div>
+                `;
+                
+                document.getElementById('well-content').innerHTML = formattedContent;
+                
+            } catch (error) {
+                console.error('Error loading story content:', error);
+                document.getElementById('well-content').innerHTML = 
+                    `<p>Error loading content: ${error.message}</p>`;
+            }
+        }
+    </script>
 </body>
 </html>
