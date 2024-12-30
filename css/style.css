@@ -535,18 +535,24 @@ body {
 
 /* 视频容器样式 */
 .video-container {
-    width: 720px;
-    max-width: 100%;
-    margin: 0 auto;  /* 移除上下边距 */
     position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
 }
 
-/* 视频自适应 */
 .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 405px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    border-radius: 12px;  /* 保持圆角一致 */
 }
 
 /* 说明文本样式 */
@@ -581,13 +587,11 @@ body {
 
 /* 游戏标题链接样式 */
 .game-title {
-    color: #ebdaf3;  /* 默认颜色为浅紫色 */
-    text-decoration: none;  /* 移除下划线 */
-    position: relative;
+    color: #FFE381 !important;  /* 使用 !important 确保颜色优先级 */
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    transition: color 0.3s ease;
+    gap: 0.5rem;
 }
 
 /* 链接图标样式 */
@@ -785,4 +789,21 @@ body {
 
 .contact-item a:hover {
     color: #FFE381;
+}
+
+/* 修复项目容器样式 */
+.project-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 确保内容区域不会溢出 */
+.content {
+    width: 100%;
+    max-width: calc(100% - 360px);  /* 减去侧边栏宽度 */
+    margin-left: 360px;
+    padding: 2rem;
+    overflow-x: hidden;  /* 防止水平溢出 */
 }
