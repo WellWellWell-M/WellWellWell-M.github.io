@@ -198,7 +198,7 @@ body {
 /* 卷轴图片样式 */
 .scroll-image {
     /* 图片宽度为容器的80% */
-    max-width: 45%;
+    max-width: 40%;
     /* 保持图片比例 */
     height: auto;
     /* 添加变换动画效果 */
@@ -727,7 +727,7 @@ body {
 
 /* 工作经历样式 */
 .experience-item {
-    padding-left: 28px;  /* 添加左侧缩进 */
+    padding-left: 30px;  /* 添加左侧缩进 */
     margin-bottom: 25px;
 }
 
