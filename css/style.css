@@ -807,3 +807,44 @@ body {
     padding: 2rem;
     overflow-x: hidden;  /* 防止水平溢出 */
 }
+
+/* 引用块的基础样式 */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+/* 中文诗句和文本样式 */
+.chinese-poem, .chinese-text {
+    color: #FFE381;  /* 黄色 */
+    margin-bottom: 1rem;  /* 在中英文之间添加间距 */
+    display: block;
+    text-align: center;
+}
+
+/* 英文翻译样式 */
+.english-translation {
+    color: rgba(255, 255, 255, 0.8);  /* 浅色 */
+    text-align: center;
+}
+
+/* 引用块内的换行 */
+blockquote br {
+    display: block;
+    margin: 0.3rem 0;
+}
+
+/* 信件引用样式 */
+.letter {
+    color: #FFE381;
+}
+
+.letter .chinese-text {
+    font-style: normal;
+    margin-top: 1rem;
+    text-align: left; 
+    color: rgba(255, 255, 255, 0.8);  /* 浅色 */
+}
