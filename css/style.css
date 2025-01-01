@@ -839,12 +839,12 @@ blockquote br {
 
 /* 信件引用样式 */
 .letter {
-    color: #FFE381;
+    color: rgba(255, 255, 255, 0.8);;
 }
 
 .letter .chinese-text {
     font-style: normal;
     margin-top: 1rem;
     text-align: left; 
-    color: rgba(255, 255, 255, 0.8);  /* 浅色 */
+    color: #FFE381;  /* 浅色 */
 }
